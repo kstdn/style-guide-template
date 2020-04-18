@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap");
+
+:root {
+  --base-font-size: 16px;
+  --small-font-size: 12px;
+
+  --base-offset: 8px;
+  --base-offset-big: 16px;
+  --base-border-radius: 4px;
+
+  --base-animation-duration: 0.3s;
+  --base-animation-timing: ease-out;
+
+  --base-box-shadow: 5 5 5;
+
+  --base-icon-width: 24px;
+
+  --neutral-01: #eeeeee;
+  --neutral-02: #bdbdbd;
+  --neutral-03: #757575;
+  --neutral-04: #222;
+  --primary: dodgerblue;
+  --primary-text: white;
+  --accent: orange;
+  --accent-text: white;
+  --neutral: gray;
+  --neutral-text: black;
+  --success: green;
+  --success-text: black;
+  --danger: red;
+  --danger-text: black;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: var(--neutral-04);
+  margin: 0;
+  padding: 0;
+  font-size: var(--base-font-size);
+  box-sizing: border-box;
+  background-color: var(--neutral-01);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+main {
+  display: grid;
+  gap: var(--base-offset-big);
+  grid-template-columns: max-content 1fr;
+}
+
+main > * {
+  padding: var(--base-offset-big);
+}
+
+.typography-boxes {
+  display: flex;
+}
+
+.typography-box {
+  flex-shrink: 0;
+  border: 1px solid var(--neutral-02);
+  padding: var(--base-offset);
+}
+
+.typography-box:not(:last-of-type) {
+  margin-inline-end: var(--base-offset);
+}
+
+.typography-box > div:nth-child(1) {
+  font-size: calc(5 * var(--base-font-size));
+}
+
+.typography-box > div:nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+}
+
+.typography-box:nth-child(1) {
+  font-weight: 100;
+}
+
+.typography-box:nth-child(2) {
+  font-weight: 200;
+}
+
+.typography-box:nth-child(3) {
+  font-weight: 300;
+}
+
+.typography-box:nth-child(4) {
+  font-weight: 400;
+}
+
+.typography-box:nth-child(5) {
+  font-weight: 500;
+}
+
+.typography-examples {
+  display: flex;
+}
+
+.typography-examples > * {
+  width: 50%;
+}
+
+.default-font-size {
+  font-size: var(--base-font-size);
+}
+
+.small-font-size {
+  font-size: var(--small-font-size);
+  margin-block-start: var(--base-offset);
+}
+
+.paragraph-label {
+  color: var(--neutral-03);
+}
+
+.color-boxes-label {
+  font-size: large;
+}
+
+.color-boxes {
+  display: flex;
+}
+
+.color-box {
+  flex-shrink: 0;
+  width: 100px;
+  height: 100px;
+  border: 1px solid var(--neutral-02);
+  padding: var(--base-offset);
+}
+
+.color-box:not(:last-of-type) {
+  margin-inline-end: var(--base-offset);
+}
+
+.color-box:nth-child(1) {
+  background-color: var(--neutral-01);
+}
+
+.color-box:nth-child(2) {
+  background-color: var(--neutral-02);
+}
+
+.color-box:nth-child(3) {
+  background-color: var(--neutral-03);
+}
+
+.color-box:nth-child(4) {
+  background-color: var(--neutral-04);
+}
